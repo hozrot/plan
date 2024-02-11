@@ -4,17 +4,33 @@ import{MaterialCommunityIcons} from '@expo/vector-icons';
 //import { ScrollView } from 'react-native-gesture-handler';
 import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 import colors from '../config/colors';
+import FlipCard from 'react-native-flip-card'
+
 function PractiseTest(props) {
     return (
       
       
           <View style={{ flex: 1 }} >
             <ScrollView>
-          <View style={{ flex: 3, backgroundColor: 'red' }}>
+              <FlipCard>
+
+              <View style={{ flex: 3, backgroundColor: 'red' }}>
+              <Image 
+                    style={styles.pic}
+                    source={require("../assets/RangpurDistrict.jpg")}/>
+              </View>
+              <View style={{ flex: 3, backgroundColor: 'red' }}>
+                <Image 
+                      style={styles.pic}
+                      source={require("../assets/rangpur.jpg")}/>
+                </View>
+              </FlipCard>
+              
+          {/* <View style={{ flex: 3, backgroundColor: 'red' }}>
           <Image 
                 style={styles.pic}
                 source={require("../assets/RangpurDistrict.jpg")}/>
-          </View>
+          </View> */}
 
           
           <View style={styles.elementRow}>

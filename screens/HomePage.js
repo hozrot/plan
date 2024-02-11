@@ -51,7 +51,7 @@ function HomePage({navigation}) {
              <View style={styles.HeaderContainer}>  
              
              <MaterialCommunityIcons name="home-city" size={50}  color={"green"}/> 
-            <Text > রংপুর  </Text>
+            <Text > হামার রংপুর  </Text>
         
              </View>
              
@@ -59,7 +59,7 @@ function HomePage({navigation}) {
                    
              <View style={styles.HeaderContainer}>  
             
-            <Text style={{ fontSize: 25 }} > Welcome to Rangpur   </Text>
+            <Text style={{ fontSize: 25, fontWeight: 'bold'}} > Welcome to Rangpur   </Text>
         
              </View>
              

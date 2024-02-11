@@ -2,6 +2,7 @@ import React from 'react';
 import { View ,Text,StyleSheet,Image} from 'react-native';
 import MenuCard from '../component/MenuCard';
 
+
 function Otherinstitute({navigation}) {
     return (
         <View style={styles.container}>
