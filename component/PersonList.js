@@ -10,8 +10,6 @@ function PersonList({name, designation, image,office,onPress}) {
                 <Text>{designation}</Text>
                 <Text>{office}</Text>
                 </View>
-
-
         </TouchableOpacity>
     );
 }
@@ -20,8 +18,6 @@ const styles = StyleSheet.create({
     List:{
         flexDirection:'row',
         margin:15
-
-        
     },
     imageBox:{
         height: 70,

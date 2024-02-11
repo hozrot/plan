@@ -4,8 +4,6 @@ import PersonList from '../component/PersonList';
 import * as OpenAnything from 'react-native-openanything';
 // need to install :  npm install react-native-openanything 
 
-
-
 const schools=[
     {
         schoolname: "জহুরুল হাট হাজী এলাহী উচ্চ বিদ্যালয় ",
@@ -80,40 +78,6 @@ const schools=[
 
 ]
 
-
-// const testAlert = () =>
-//    Alert.alert(
-      
-//     "item.schoolname"
-//       [
-//          {
-//             text: "Phone Call",
-//             onPress: () => OpenAnything.Call(item.mobileno)
-//          },
-//          {
-//             text: "Cancel",
-//             onPress: () => OpenAnything.Web()
-            
-//          },
-//          { text: "OK",
-//             onPress: () => console.log("OK Pressed")
-//          }
-//       ],
-//       { cancelable: true }
-//    );
-// dialCall = (mobileno) => {
-
-//     let phoneNumber = '';
-
-//     if (Platform.OS === 'android') {
-//       phoneNumber = 'tel:{mobileno}';
-//     }
-//     else {
-//       phoneNumber = 'telprompt:[mobileno]';
-//     }
-
-//     Linking.openURL(phoneNumber);
-//   };
 function schoolList({navigation}) {
     return (
         <FlatList 
@@ -129,17 +93,6 @@ function schoolList({navigation}) {
                 />}
         
         />
-
-
-        // <Button onPress={() => OpenAnything.Email('someone@google.com')}>
-        // 	<Text>E-Mail</Text>
-        // </Button>
-        // <Button onPress={() => OpenAnything.Web('http://www.google.com')}>
-        // 	<Text>Google Homepage</Text>
-        // </Button>
-        // <Button onPress={() => OpenAnything.Map('Google')}>
-        // 	<Text>Google HQ</Text>
-        // </Button>
     );
 }
 

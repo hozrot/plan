@@ -5,15 +5,20 @@ import{MaterialCommunityIcons} from '@expo/vector-icons';
 // need to import MenuCard Template like bellow 
 import MenuCard from '../component/MenuCard';
 import GestureFlipView from 'react-native-gesture-flip-card';
+
+import FlipCard from 'react-native-flip-card'
+//npm i react-native-flip-card
+
+
 // npm install --save react-native-gesture-flip-card
 
 // const renderFront = () => {
 //     return (
 //         <View style={styles.Header}>
-//             <View style={styles.HeaderContainer}>  
+            
 //             <MaterialCommunityIcons name="home-city" size={30}  color={"green"}/> 
 //             <Text> রংপুর  </Text>
-//             </View>
+            
 //         </View>
 //     );
 //   };
@@ -21,10 +26,10 @@ import GestureFlipView from 'react-native-gesture-flip-card';
 // const renderBack = () => {
 //   return (
 //     <View style={styles.Header}>
-//             <View style={styles.HeaderContainer}>  
+            
 //             <MaterialCommunityIcons name="home-city" size={50}  color={"green"}/> 
 //             <Text style={{left: 10}}> OK test  </Text>
-//             </View>
+            
 //         </View>  
 //   );
 // };
@@ -32,12 +37,33 @@ import GestureFlipView from 'react-native-gesture-flip-card';
 function HomePage({navigation}) {
     return (
        <SafeAreaView style={styles.mainContainer}>
-         <View style={styles.Header}>
+         {/* <View style={styles.Header}>
              <View style={styles.HeaderContainer}>  
              <MaterialCommunityIcons name="home-city" size={50}  color={"green"}/> 
-             <Text style={{left: 10}}> রংপুর  </Text>
+            <Text margin={30} > রংপুর  </Text>
+        
              </View>
-         </View>
+             </View> */}
+             
+             <FlipCard>
+                    {/* Face Side */}
+                   
+             <View style={styles.HeaderContainer}>  
+             
+             <MaterialCommunityIcons name="home-city" size={50}  color={"green"}/> 
+            <Text > রংপুর  </Text>
+        
+             </View>
+             
+                    {/* Back Side */}
+                   
+             <View style={styles.HeaderContainer}>  
+            
+            <Text style={{ fontSize: 25 }} > Welcome to Rangpur   </Text>
+        
+             </View>
+             
+             </FlipCard>
          {/* <View style={styles.Header}>
              <View style={styles.HeaderContainer}> 
                 <GestureFlipView width={1200} height={500}>
@@ -78,14 +104,11 @@ const styles = StyleSheet.create({
     
     mainContainer:{
         backgroundColor: "#FF6C01",
+      //  backgroundColor: "#7fff00",
         flex: 1,
         // alignContent: "center"
     },
-    Header:{
-        flex: .50,
-        //backgroundColor: "#4ecdc4",
-        flexDirection: "column",
-    },
+    
     HeaderContainer:{
         flex:1,
         backgroundColor: "aliceblue",

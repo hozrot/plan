@@ -2,7 +2,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomePage from './screens/HomePage';
 import PractiseTest from './screens/PractiseTest';
 import EduInstitute from './screens/EduInstitute';
-import MenuCard from './component/MenuCard';
 import VipPerson from './screens/VipPerson';
 import VipDetails from './screens/VipDetails';
 import VipList from './screens/VipList';
@@ -35,28 +34,25 @@ export default function App() {
             <Stack.Screen name="Rangpur" component={PractiseTest}/>
 
             <Stack.Screen name="Education" component={EduInstitute}/>
-          
-            <Stack.Screen name="Vip" component={VipPerson}/>
-          
-            <Stack.Screen name="VipDetails" component={VipDetails}/>
-          
-            <Stack.Screen name="Menu" component={MenuCard}/>
+            <Stack.Screen name="school" component={schoolList}/>
 
             <Stack.Screen name="Administration" component={Administration}/>
             <Stack.Screen name="AdministrationList" component={AdministrationList}/>
           
-            <Stack.Screen name="Helpline" component={Helpline}/>
+            <Stack.Screen name="Vip" component={VipPerson}/>
             <Stack.Screen name="VipList" component={VipList}/>
-            <Stack.Screen name="Otherinstitute" component={Otherinstitute}/>
+            <Stack.Screen name="VipDetails" component={VipDetails}/>
           
+            {/* <Stack.Screen name="Menu" component={MenuCard}/> */}
+          
+            <Stack.Screen name="Helpline" component={Helpline}/>
+            <Stack.Screen name="HelplineList" component={HelplineList}/>
+
+            <Stack.Screen name="Otherinstitute" component={Otherinstitute}/>
+            <Stack.Screen name="OtherinstituteList" component={OtherinstituteList}/>
             <Stack.Screen name="instituteDetails" component={instituteDetails}/>
            
-        <Stack.Screen name="HelplineList" component={HelplineList}/>
        
-        <Stack.Screen name="OtherinstituteList" component={OtherinstituteList}/>
-     
-        <Stack.Screen name="school" component={schoolList}/>
-
      </Stack.Navigator>
   </NavigationContainer>
   );
