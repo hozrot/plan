@@ -14,6 +14,7 @@ import Otherinstitute from './screens/Otherinstitute'
 import OtherinstituteList from './screens/OtherinstituteList'
 import instituteDetails from './screens/instituteDetails'
 import schoolList from './screens/schoolList'
+import FlipTest from './screens/FlipTest'
 
 // navigation will be active by installing: 
 //npm install react-navigation
@@ -21,6 +22,8 @@ import schoolList from './screens/schoolList'
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Explore from './screens/explore';
+import WelcomeScreen from './screens/WelcomeScreen';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -51,7 +54,11 @@ export default function App() {
             <Stack.Screen name="Otherinstitute" component={Otherinstitute}/>
             <Stack.Screen name="OtherinstituteList" component={OtherinstituteList}/>
             <Stack.Screen name="instituteDetails" component={instituteDetails}/>
-           
+            <Stack.Screen name="Explore" component={Explore}/>
+            <Stack.Screen name="WelcomeScreen" component={WelcomeScreen}/>
+            <Stack.Screen name="FlipTest" component={FlipTest}/>
+
+            {/* <Stack.Screen name="Explore" component={Explore}/>         */}
        
      </Stack.Navigator>
   </NavigationContainer>

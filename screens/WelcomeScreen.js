@@ -13,11 +13,11 @@ function WelcomeScreen({ navigation }) {
     return (
        <ImageBackground 
             style={styles.background}
-            source={require("../assets/background.jpeg")}>
+            source={require("../assets/rangpur.jpg")}>
               <View style={styles.LogoContainer}>
                 <Image 
                 style={styles.Logo}
-                source={require("../assets/logo.jpeg")}/>
+                source={require("../assets/icon.png")}/>
                 <Text style={styles.TextContainer}> Our Choise Your Desire </Text>
                 <Button
                         title="Go to Details... again"

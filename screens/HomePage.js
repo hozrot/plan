@@ -96,6 +96,12 @@ function HomePage({navigation}) {
             <MenuCard menuTitle={"বিশিষ্ট ব্যাক্তিবর্গ"} iconName={"panda"} iconSize={80}
                     iconColor={"green"} onPress={() => navigation.navigate('Vip')} />
          </View>
+         <View style={styles.Row}>
+            <MenuCard menuTitle={"Explore Rangpur"} iconName={"google-maps"} iconSize={80}
+                    iconColor={"green"} onPress={() => navigation.navigate('Explore')} />
+
+           
+         </View>
         </SafeAreaView> 
     );
 }
