@@ -9,6 +9,7 @@ import MapView from 'react-native-maps';
 import ImagedCardView from "react-native-imaged-card-view";
 // npm i react-native-imaged-card-view
 import ImagedCard from "react-native-imaged-card";
+import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 
 export default function Explore({navigation}) {
   return (
@@ -51,7 +52,6 @@ export default function Explore({navigation}) {
                     </View>
                    </ScrollView>
             </View>
-           
             <View style={styles.map}>
             
             <MapView style={styles.map}  initialRegion={{
@@ -59,15 +59,28 @@ export default function Explore({navigation}) {
                     longitude: 89.2467958,     
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,              
-  }}/>
+                     }}/>
             </View>
            
+           
             <View style={styles.card}>
+            {/* <Collapse>
+                <CollapseHeader>
+                <View>
+                    <Text>Map </Text>
+                </View>
+                </CollapseHeader>
+                <CollapseBody>
+               <View>
+                    <Text>ok ok ok </Text></View>
+                   
+                </CollapseBody>
+            </Collapse> */}
                 <ScrollView >
-            <ImagedCard stars={5} title="Nuts "/>
-            <ImagedCard stars={5} title="Nuts "/>
-            <ImagedCard stars={5} title="Nuts "/>
-            </ScrollView>
+                    <ImagedCard stars={4} title="uuuu "/>
+                    <ImagedCard stars={5} title="Nuts "/>
+                    <ImagedCard stars={5} title="Nuts "/>
+                </ScrollView>
             </View>
            
         </View>
@@ -106,11 +119,12 @@ const styles = StyleSheet.create({
       
     },
     card:{
-        flex:4,
+        flex:5,
         backgroundColor: 'aliceblue',
         justifyContent:'center',
         alignContent:'center',
-        flexDirection:'column'
+        alignSelf:'stretch',
+        flexDirection:'row',
        
       
     },

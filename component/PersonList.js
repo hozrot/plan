@@ -9,6 +9,7 @@ function PersonList({name, designation, image,office,onPress}) {
                 <Text>{name}</Text>
                 <Text>{designation}</Text>
                 <Text>{office}</Text>
+                
                 </View>
         </TouchableOpacity>
     );

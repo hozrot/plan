@@ -14,8 +14,6 @@ function MenuCard({onPress,menuTitle,iconName,iconSize,
     );
 }
 const styles = StyleSheet.create({
-
-   
     Container:{
         flex:1,
         backgroundColor: "aliceblue",

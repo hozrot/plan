@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text ,View, StyleSheet, TouchableOpacity} from 'react-native';
+import { Text ,View, StyleSheet,ScrollView, TouchableOpacity} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import{MaterialCommunityIcons} from '@expo/vector-icons';
 // need to import MenuCard Template like bellow 
@@ -36,7 +36,7 @@ import FlipCard from 'react-native-flip-card'
 
 function HomePage({navigation}) {
     return (
-       <SafeAreaView style={styles.mainContainer}>
+       <View style={styles.mainContainer}>
          {/* <View style={styles.Header}>
              <View style={styles.HeaderContainer}>  
              <MaterialCommunityIcons name="home-city" size={50}  color={"green"}/> 
@@ -72,6 +72,7 @@ function HomePage({navigation}) {
                 </GestureFlipView>
              </View>
         </View> */}
+        
          <View style={styles.Row}>
 
             <MenuCard menuTitle={"এক নজরে রংপুর "} iconName={"bullseye-arrow"} iconSize={80}
@@ -96,13 +97,15 @@ function HomePage({navigation}) {
             <MenuCard menuTitle={"বিশিষ্ট ব্যাক্তিবর্গ"} iconName={"panda"} iconSize={80}
                     iconColor={"green"} onPress={() => navigation.navigate('Vip')} />
          </View>
+
          <View style={styles.Row}>
             <MenuCard menuTitle={"Explore Rangpur"} iconName={"google-maps"} iconSize={80}
-                    iconColor={"green"} onPress={() => navigation.navigate('Explore')} />
-
-           
+                    iconColor={"green"} onPress={() => navigation.navigate('Explore')} />   
+                           
          </View>
-        </SafeAreaView> 
+         
+         </View>
+     
     );
 }
 
@@ -116,16 +119,26 @@ const styles = StyleSheet.create({
     },
     
     HeaderContainer:{
-        flex:1,
+        flex: 1,
         backgroundColor: "aliceblue",
         justifyContent: "center",
         alignItems:'center',
         borderRadius: 35 ,
-        margin: 5,
+        margin: 1,
         flexDirection: "row",
-    },  
+    }, 
+    menu:{
+       
+       // backgroundColor: "#fc5c65",
+        flexDirection:"column"
+    },   
     Row:{
-        flex: 1,
+        flex: 2,
+       // backgroundColor: "#fc5c65",
+        flexDirection:"row"
+    },  
+    LastRowRow:{
+        flex:2,
        // backgroundColor: "#fc5c65",
         flexDirection:"row"
     },  
