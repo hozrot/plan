@@ -7,33 +7,39 @@ import Helpline from './Helpline';
 import schoolList from './schoolList';
 
 import{MaterialCommunityIcons} from '@expo/vector-icons';
+import { StatusBar } from 'expo-status-bar';
+import AppHome from './AppHome';
+import Qdirection from './Qdirection';
+import Calender from './Calender';
+
 
 const Tab = createBottomTabNavigator();
 function OtherinstituteList(props) {
     return (
 
         <Tab.Navigator>
-            <Tab.Screen name="Home" component={HomePage}  
+           
+            <Tab.Screen name="Home" component={AppHome}  
              options={{
-                tabBarLabel: 'School',
+                tabBarLabel: 'Home',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="school" color={'blue'} size={20} />
+                    <MaterialCommunityIcons name="mosque" color={'blue'} size={35} />
                 ),
                 }}/>
-            <Tab.Screen name="Settings" component={Helpline}
+            <Tab.Screen name="Direction" component={Qdirection}
              options={{
-                tabBarLabel: 'College',
+                tabBarLabel: 'Direction',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="bank" color={'red'} size={20} />
+                    <MaterialCommunityIcons name="directions" color={'blue'} size={35} />
                 ),
                 }} />
             <Tab.Screen
-                name="null"
-                component={schoolList}
+                name="Calender"
+                component={Calender}
                 options={{
-                tabBarLabel: 'University',
+                tabBarLabel: 'Calender',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="pen" color={'green'} size={20} />
+                    <MaterialCommunityIcons name="clipboard-list" color={'blue'} size={35} />
                 ),
                 }}
             />

@@ -24,6 +24,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Explore from './screens/explore';
 import WelcomeScreen from './screens/WelcomeScreen';
+import AppHome from './screens/AppHome';
+
+import Calender from './screens/Calender';
+import Qdirection from './screens/Qdirection';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -57,6 +61,9 @@ export default function App() {
             <Stack.Screen name="Explore" component={Explore}/>
             <Stack.Screen name="WelcomeScreen" component={WelcomeScreen}/>
             <Stack.Screen name="FlipTest" component={FlipTest}/>
+            <Stack.Screen name="AppHome" component={AppHome}/>
+            <Stack.Screen name="Qdirection" component={Qdirection}/>
+            <Stack.Screen name="Calender" component={Calender}/>
 
             {/* <Stack.Screen name="Explore" component={Explore}/>         */}
        

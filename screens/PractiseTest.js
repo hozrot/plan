@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View,ScrollView,TouchableOpacity, Button,onPressLearnMore,Alert,Image,Pressable ,navigation, SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View,StatusBar,ScrollView,TouchableOpacity, Button,onPressLearnMore,Alert,Image,Pressable ,navigation, SafeAreaView} from 'react-native';
 import{MaterialCommunityIcons} from '@expo/vector-icons';
 //import { ScrollView } from 'react-native-gesture-handler';
 import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
@@ -11,6 +11,7 @@ function PractiseTest(props) {
       
       
           <View style={{ flex: 1 }} >
+             <StatusBar hidden={true}/>
             <ScrollView>
               <FlipCard>
 

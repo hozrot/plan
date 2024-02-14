@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text ,View, StyleSheet,ScrollView, TouchableOpacity} from 'react-native';
+import { Text ,View, StyleSheet,ScrollView, StatusBar,TouchableOpacity} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import{MaterialCommunityIcons} from '@expo/vector-icons';
 // need to import MenuCard Template like bellow 
@@ -37,6 +37,7 @@ import FlipCard from 'react-native-flip-card'
 function HomePage({navigation}) {
     return (
        <View style={styles.mainContainer}>
+          <StatusBar hidden={true}/>
          {/* <View style={styles.Header}>
              <View style={styles.HeaderContainer}>  
              <MaterialCommunityIcons name="home-city" size={50}  color={"green"}/> 
