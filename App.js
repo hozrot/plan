@@ -15,6 +15,7 @@ import OtherinstituteList from './screens/OtherinstituteList'
 import instituteDetails from './screens/instituteDetails'
 import schoolList from './screens/schoolList'
 import FlipTest from './screens/FlipTest'
+import PrayerTime from './screens/PrayerTime'
 
 // navigation will be active by installing: 
 //npm install react-navigation
@@ -64,6 +65,7 @@ export default function App() {
             <Stack.Screen name="AppHome" component={AppHome}/>
             <Stack.Screen name="Qdirection" component={Qdirection}/>
             <Stack.Screen name="Calender" component={Calender}/>
+            <Stack.Screen name="PrayerTime" component={PrayerTime}/>
 
             {/* <Stack.Screen name="Explore" component={Explore}/>         */}
        

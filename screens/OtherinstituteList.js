@@ -11,6 +11,7 @@ import { StatusBar } from 'expo-status-bar';
 import AppHome from './AppHome';
 import Qdirection from './Qdirection';
 import Calender from './Calender';
+import PrayerTime from './PrayerTime';
 
 
 const Tab = createBottomTabNavigator();
@@ -26,11 +27,11 @@ function OtherinstituteList(props) {
                     <MaterialCommunityIcons name="mosque" color={'blue'} size={35} />
                 ),
                 }}/>
-            <Tab.Screen name="Direction" component={Qdirection}
+            <Tab.Screen name="Prayer Time" component={PrayerTime}
              options={{
-                tabBarLabel: 'Direction',
+                tabBarLabel: 'Prayer Time',
                 tabBarIcon: ({ color, size }) => (
-                    <MaterialCommunityIcons name="directions" color={'blue'} size={35} />
+                    <MaterialCommunityIcons name="av-timer" color={'blue'} size={35} />
                 ),
                 }} />
             <Tab.Screen
