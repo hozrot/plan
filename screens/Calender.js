@@ -1,56 +1,62 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View,FlatList, TouchableOpacity } from 'react-native'
+
+import React, { useState, useEffect } from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import TextCard from '../component/TextCard';
+
+import axios from 'axios';
+
+const API_URL = 'https://api.aladhan.com/v1/asmaAlHusna';
 export default function Calender({ navigation }) {
+  const [data, setData] = useState([]);
+
+  const  myJsonString = JSON.stringify(data);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(API_URL);
+      setData(response.data);
+      console.log(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
   return (
-    <View style={styles.mainnContainer}>
-     
-        <TextCard iconName={"pac-man"} iconColor={"green"} refText={"jgjg:87,mtf:55"} iconSize={30}
-          textDetails={"jkhgjfygfytfgvhgvgjhvjhgv"} cardTitle={"Another"} 
-          onPressShare={() => navigation.navigate('Helpline')} 
-          onPressDetails={() => navigation.navigate('Rangpur')} />
-      </View>
-     
-  
+    <View style={styles.container}>
+      {/* <Text style={styles.title}>Making API Requests</Text>
+      <View style={styles.item}>
+            <Text>test {data.number.tostring()}</Text>
+            <Text>test2 </Text>
+          </View> */}
+ <Text style={styles.title}>Making API Requests</Text>
+ <Text>test {myJsonString.name}</Text>
+ <Text>test {data.code}</Text>
+ <Text>test {data.number}</Text>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  mainnContainer: {
+  container: {
+    marginTop:70,
     flex: 1,
-    backgroundColor: "#FF6C01",
-    flexDirection: "column",
-    //make object into center this two line
-    // alignItems:'center',
-    // justifyContent:'center'        
+    justifyContent:'center',
+    alignItems:'center',
+    padding: 16,
+    backgroundColor: '#fff',
   },
-  card1: {
-    flex: 1.5,
-    backgroundColor: "#A6C5EB",
-    padding: 5
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
   },
-  cardhead: {
-    flex: 1,
-    flexDirection: "row",
+  item: {
+    backgroundColor: '#f5f5f5',
+    padding: 10,
+    marginVertical: 8,
+    borderRadius: 8,
   },
-  cardbody: {
-    flex: 2,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  cardfooter: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-between"
-
-  },
-  card2: {
-    flex: 2,
-    backgroundColor: "#FFC5C7",
-  },
-  card3: {
-    flex: 3,
-    backgroundColor: "#FF6C01",
-  }
 })

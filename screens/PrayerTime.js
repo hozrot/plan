@@ -50,6 +50,9 @@ export default function PrayerTime() {
             </View>
             </View>
             <View style={styles.specialBlock}>
+                <View>
+                    <Text style={{fontWeight:'bold',fontSize:20,}}> Special Events</Text>
+                </View>
                 <ScrollView>
                     <View style={{padding:20, alignItems:'center',justifyContent:'center'}} >
                 <Text>Eid-Ul-fiter   </Text>
@@ -81,8 +84,7 @@ const styles = StyleSheet.create({
         flexDirection: "column",
     },
     headBlock: {
-        flex: .25,
-        
+        flex: .30,
         flexDirection: "column",
         justifyContent:'space-between',
         alignItems:'center',
@@ -104,7 +106,7 @@ const styles = StyleSheet.create({
         fontSize:25,
     },
     otherBlock: {
-        flex:.5,
+        flex:.35,
         flexDirection: "row",
         padding:20
 
@@ -118,9 +120,10 @@ const styles = StyleSheet.create({
         alignItems:'center'
     },
     specialBlock:{
-        flex: .35,
+        flex: .55,
         justifyContent:'center',
-        flexDirection:'row',
+        alignItems:'center',
+        flexDirection:'column',
         
         
        

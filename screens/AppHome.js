@@ -1,12 +1,52 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Image, ScrollView, Share,Alert } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import TextCard from '../component/TextCard'
-
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 export default function AppHome({ navigation }) {
   return (
     <View style={styles.mainnContainer}>
-      <ScrollView>
+      <View style={styles.HeadBlock}>
+        <View style={styles.Iftar}>
+          <MaterialCommunityIcons name={"sun-wireless"} size={30} color={"orange"} />
+          <Text>Iftar  </Text>
+          <Text>5:30 PM   </Text>
+        </View>
+        <ScrollView style={styles.Current}>
+          <View style={styles.Iftar}>
+            <MaterialCommunityIcons name={"weather-sunset-up"} size={30} color={"gray"} />
+            <Text>Fazr   </Text>
+            <Text>5:30 AM   </Text>
+          </View>
+          <View style={styles.Iftar}>
+            <MaterialCommunityIcons name={"white-balance-sunny"} size={30} color={"gray"} />
+            <Text>Duhr   </Text>
+            <Text>1:30 PM   </Text>
+          </View>
+          <View style={styles.Iftar}>
+            <MaterialCommunityIcons name={"weather-sunset"} size={30} color={"gray"} />
+            <Text>Asar  </Text>
+            <Text>4:30 PM   </Text>
+          </View>
+          <View style={styles.Iftar}>
+            <MaterialCommunityIcons name={"weather-sunset-down"} size={30} color={"gray"} />
+            <Text>Magrib  </Text>
+            <Text>6:30 PM   </Text>
+          </View>
+          <View style={styles.Iftar}>
+            <MaterialCommunityIcons name={"weather-night"} size={30} color={"gray"} />
+            <Text>Esha  </Text>
+            <Text>8:30 PM   </Text>
+          </View>
+
+        </ScrollView>
+        <View style={styles.Suhoor}>
+          <MaterialCommunityIcons name={"weather-night-partly-cloudy"} size={30} color={"black"} />
+          <Text>Suhoor  </Text>
+          <Text>4:30 AM </Text>
+        </View>
+      </View>
+      <ScrollView style={styles.contectView}>
         {/* <View style={styles.timeBlock}>
         <View>
           <Text style={styles.timeText}>Fazar : 05 : 17 </Text>
@@ -40,42 +80,38 @@ export default function AppHome({ navigation }) {
         </View>
 
       </View> */}
-        <View style={{ padding:20, }}>
-          <TextCard iconName={"shield-moon"} iconColor={"blue"} refText={"jgjg:87,mtf:55"} iconSize={30}
-            textDetails={"testtesttesttestvvtesttesttesttesttesttesttes ttesttesttesttesttesttesttesttesttesttesttesttesttesttest"} 
-            cardTitle={"Dua"}
-            onPressShare={() => navigation.navigate('Helpline')}
-            onPressDetails={() => navigation.navigate('Rangpur')} />
+        <View style={{ padding: 10}}>
+          <TextCard iconName={"shield-moon"} iconColor={"blue"} refText={"aaa:87,zzz:55"} iconSize={30}
+            textDetails={"Alhamdulillah"}
+            cardTitle={"Dua"} 
+          />
         </View>
 
-        <View style={{ padding:20, }}>
-          <TextCard iconName={"shimmer"} iconColor={"blue"} refText={"jgjg:87,mtf:55"} iconSize={30}
+        <View style={{ padding: 10, }}>
+          <TextCard iconName={"shimmer"} iconColor={"blue"} refText={"bbbb:87,cccc:55"} iconSize={30}
             textDetails={"testtesttesttestvvtesttesttesttesttesttesttes ttesttesttesttesttesttesttesttesttesttesttesttesttesttest"}
-             cardTitle={"Ayat"}
-            onPressShare={() => navigation.navigate('Helpline')}
-            onPressDetails={() => navigation.navigate('Rangpur')} />
+            cardTitle={"Ayat"}/>
+            {/* // onPressShare={() => navigation.navigate('Helpline')}
+            // onPressDetails={() => navigation.navigate('Rangpur')}  */}
         </View>
 
-        <View style={{ padding:20, }}>
+        <View style={{ padding: 10, }}>
           <TextCard iconName={"shuriken"} iconColor={"blue"} iconSize={30}
             textDetails={"testtesttesttestvvtesttesttesttesttesttesttes ttesttesttesttesttesttesttesttesttesttesttesttesttesttest"}
-             cardTitle={"Beautiful Name"}
-            onPressShare={() => navigation.navigate('Helpline')}
-            onPressDetails={() => navigation.navigate('Rangpur')} />
+            cardTitle={"Beautiful Name"}
+          />
         </View>
-        <View style={{ padding:20, }}>
+        <View style={{ padding: 10, }}>
           <TextCard iconName={"shape-circle-plus"} iconColor={"blue"} iconSize={30}
             textDetails={"testtesttesttestvvtesttesttesttesttesttesttes ttesttesttesttesttesttesttesttesttesttesttesttesttesttest"}
-             cardTitle={"Tasbeeh"}
-            onPressShare={() => navigation.navigate('Helpline')}
-            onPressDetails={() => navigation.navigate('Rangpur')} />
+            cardTitle={"Tasbeeh"}
+             />
         </View>
-        <View style={{ padding:20, }}>
+        <View style={{ padding: 10, }}>
           <TextCard iconName={"text"} iconColor={"blue"} refText={"jgjg:87,mtf:55"} iconSize={30}
             textDetails={"testtesttesttestvvtesttesttesttesttesttesttes ttesttesttesttesttesttesttesttesttesttesttesttesttesttest"}
-             cardTitle={"Daily Quote"}
-            onPressShare={() => navigation.navigate('Helpline')}
-            onPressDetails={() => navigation.navigate('Rangpur')} />
+            cardTitle={"Daily Quote"}
+            />
         </View>
 
 
@@ -93,6 +129,24 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     justifyContent: 'center'
 
+  },
+  HeadBlock: {
+    flex: .15,
+    flexDirection: "row",
+    alignItems: 'space-around',
+    padding: 5
+
+  },
+  contectView:{
+    flex: 1,
+  },
+  Iftar: {
+    flex: 1,
+    alignItems: 'center'
+  },
+  Suhoor: {
+    flex: 1,
+    alignItems: 'center'
   },
 
 
